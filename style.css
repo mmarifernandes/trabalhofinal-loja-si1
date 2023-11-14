@@ -13,10 +13,73 @@ body{
 }
 img{
     width: 60%;
-    height: 50%;
-    margin-top: 3vh;
+    height: 45%;
+    margin-top: 2vh;
+}
+.info{
+    font-size: 14px;
+    color: #545454;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
+@keyframes enter {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 10;
+    }
+
+    from {
+        margin-left: 10%;
+    }
+}
+
+
+@keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+.carrinhocheio{
+    animation: enter 2s;
+}
+
+#popup{
+    display: none;
+    width: 60%;
+    height: 70%;
+    /* display: flex; */
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    margin-left: 20%;    
+    background-color: rgb(203 191 223);
+    border-radius: 8px;
+    box-shadow: rgba(175, 175, 175, 0.2) 0px 2px 8px 0px;
+    animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+
+}
+#lista{
+    margin: 5vw;
+    /* display: flex; */
+    width: 60%;
+}
+#itemlista{
+    display: flex;
+    border-bottom: 1px solid gray;
+    /* justify-content: space-between; */
+}
+
+#nomeitem{
+    width: 85%;
+    overflow-x: hidden;
+}
 .container{
     display: flex;
     justify-content: center;
@@ -63,8 +126,16 @@ img{
     margin: 0 auto;
     margin-bottom: 10vh;
     color: white;
+    display: flex;
 }
 
+.header img{
+    width: 30px;
+    height: 30px;
+    /* margin: 0 auto; */
+    margin-top: 1.2vh;
+    margin-right: 2vw;
+}
 .button {
   appearance: none;
   background-color: #FAFBFC;
