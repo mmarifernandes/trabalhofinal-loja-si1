@@ -5,7 +5,7 @@ function addToCart(produto, button){
     button.innerHTML = "Adicionado!"
     button.disabled = true;
     document.getElementById("carrinho").setAttribute("class", "carrinhocheio");
-    document.getElementById("carrinho").src = "/assets/carrinhocheio.png"
+    document.getElementById("carrinho").src = "assets/carrinhocheio.png"
     console.log(carrinho)
 }
 
