@@ -65,10 +65,28 @@ img{
   animation-fill-mode: backwards;
 
 }
+
+.total{
+    width: 45%;
+    text-align: center;
+    /* margin-top: 5vw; */
+}
+.total h2{
+    margin-bottom: 5px;
+}
+
+#valortotal{
+    margin: 0 auto;
+    font-size: 3vw;
+    margin-top: 5px;
+}
 #lista{
-    margin: 5vw;
+    margin-top: 5vw;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
+    margin-right: 15px;
     /* display: flex; */
-    width: 60%;
+    width: 45%;
 }
 #itemlista{
     display: flex;

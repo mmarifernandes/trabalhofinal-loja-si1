@@ -17,19 +17,31 @@ function checkOut(){
     // for(let i = 0; i<=carrinho.length; i+=1){
     //     document.getElementById("lista").innerHTML = "asdads"
     // }
+    somar()
     console.log("teste")
 }
 
 function printLista() {
     document.getElementById("lista").innerHTML = "<h3>Carrinho de compras</h3>"
     console.log(document.getElementById("lista"))
-        for(let i = 0; i<=carrinho.length; i+=1){
+        for(let i = 0; i<carrinho.length; i+=1){
         document.getElementById("lista").innerHTML += '<div id="itemlista"> <p id = "nomeitem">'+ carrinho[i][0] + '<p>R$'+carrinho[i][1]+'</p></p></div>'
     }
+
   }
 
 
-  window.addEventListener('mouseup',function(event){
+function somar(){
+    let total = 0
+    for(let i = 0; i<carrinho.length; i+=1){
+        total+= carrinho[i][1]
+    }
+    console.log(total)
+    document.getElementById("valortotal").innerText = 'R$'+total
+
+}
+
+window.addEventListener('mouseup',function(event){
     var popup = document.getElementById('popup');
     if(event.target != popup && event.target.parentNode != popup){
         popup.style.display = 'none';
