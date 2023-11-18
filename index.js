@@ -13,6 +13,7 @@ function checkOut(){
     // location.replace("/checkout.html");
     // location.reload()
     document.getElementById("popup").style.display = "flex"
+    // document.getElementById("bg").style.
     printLista()
     // for(let i = 0; i<=carrinho.length; i+=1){
     //     document.getElementById("lista").innerHTML = "asdads"
@@ -25,7 +26,7 @@ function printLista() {
     document.getElementById("lista").innerHTML = "<h3>Carrinho de compras</h3>"
     console.log(document.getElementById("lista"))
         for(let i = 0; i<carrinho.length; i+=1){
-        document.getElementById("lista").innerHTML += '<div id="itemlista"> <p id = "nomeitem">'+ carrinho[i][0] + '<p>R$'+carrinho[i][1]+'</p></p></div>'
+        document.getElementById("lista").innerHTML += '<div id="itemlista"><img src="'+carrinho[i][2]+'" id="imglista" alt=""> <p id = "nomeitem">'+ carrinho[i][0] + '<p>R$'+carrinho[i][1]+'</p></p></div>'
     }
 
   }
@@ -41,9 +42,15 @@ function somar(){
 
 }
 
-window.addEventListener('mouseup',function(event){
+function hidePopUp(){
+
     var popup = document.getElementById('popup');
-    if(event.target != popup && event.target.parentNode != popup){
-        popup.style.display = 'none';
-    }
-});  
+    var bg = this.document.getElementById('bg');
+    popup.style.display = 'none';
+    bg.classList.remove("unblurred");
+}
+// window.addEventListener('mouseup',function(event){
+//     if(event.target != popup && event.target.parentNode != popup){
+//     }
+
+// });  
