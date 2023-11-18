@@ -24,7 +24,26 @@
             <div class="total">
                 <h2>Total</h2>
                 <h4 id="valortotal"></h4>
-
+                <p style="font-size: 14px">Método de pagamento: </p>
+                <input type="radio" name="metodop" id="cartao">
+                <label for="cartao">Cartão</label>
+                <input type="radio" name="metodop" id="pix">
+                <label for="pix">Pix</label>
+                <div id="pixm">
+                    <form class="checkout">
+                        <p>
+                          <input type="text" class="checkout-input checkout-namep" placeholder="Nome completo">
+                          
+                        </p>
+                        <p>
+                            <input type="text" class="checkout-input checkout-cpf" placeholder="CPF: 123.456.789.00">
+                        </p>
+                        <p>
+                            <input type="submit" value="Finalizar" class="checkout-btnp">
+                          </p>
+                      </form>
+                </div>
+                <div id="card">
                 <form class="checkout">
                     <!-- <div class="checkout-header">
                       <h1 class="checkout-title">
@@ -32,6 +51,16 @@
                         <span class="checkout-price">$10</span>
                       </h1>
                     </div> -->
+                    <p>
+                        <label for="parcela" id="labelp">Parcelas: </label>
+                        <select name="parcela" id="parcela">
+                            <option value="">1x</option>
+                            <option value="">2x</option>
+                            <option value="">3x</option>
+                            <option value="">4x</option>
+                            <option value="">5x</option>
+                        </select>
+                    </p>
                     <p>
                       <input type="text" class="checkout-input checkout-name" placeholder="Nome do titular">
                       <input type="text" class="checkout-input checkout-exp" placeholder="MM">
@@ -45,6 +74,7 @@
                       <input type="submit" value="Finalizar" class="checkout-btn">
                     </p>
                   </form>
+                </div>
 
                   
             </div>
@@ -63,28 +93,37 @@
             <h3 class="title">Samsung Galaxy Z Flip5 5G</h3>
             <p class="info">256GB, 8GB RAM, Tela Infinita de 6.4" Dual Chip Lilás</p>
             <p class="preco">R$5.499</p>
-            <button onclick="addToCart(['Samsung Galaxy Z Flip5 5G', 5499, 'assets/zflip.png'], this)" class="button" id="button1">Adicionar ao carrinho</button>
+            <button onclick="addToCart(['Samsung Galaxy Z Flip5 5G', 5499.99, 'assets/zflip.png'], this)" class="button" id="button1">Adicionar ao carrinho</button>
         </div>
         <div class="item">
             <img src="assets/fone.png" alt="">
             <h3 class="title">JBL, Fone de Ouvido On ear</h3>
             <p class="info">Marca	JBL Nome do modelo	JBLT520BTWHT Cor: Branco</p>
             <p class="preco">R$199</p>
-            <button onclick="addToCart(['JBL Fone de Ouvido On ear', 199, 'assets/fone.png'], this)" class="button" id="button2">Adicionar ao carrinho</button>
+            <button onclick="addToCart(['JBL Fone de Ouvido On ear', 199.90, 'assets/fone.png'], this)" class="button" id="button2">Adicionar ao carrinho</button>
         </div>
         <div class="item">
             <img src="assets/alexa.png" alt="">
             <h3 class="title">Echo Dot 5ª geração</h3>
             <p class="info">com Relógio | Smart speaker com Alexa | Cor Azul Claro</p>
             <p class="preco">R$599</p>
-            <button onclick="addToCart(['Echo Dot 5ª geração', 599, 'assets/alexa.png'], this)" class="button" id="button3">Adicionar ao carrinho</button>
+            <button onclick="addToCart(['Echo Dot 5ª geração', 599.00, 'assets/alexa.png'], this)" class="button" id="button3">Adicionar ao carrinho</button>
         </div>
     <!-- </div> -->
 </div>
     <script src="jquery.js"></script>
 
  <script>
-    
+
+    $('#cartao').click(function(){
+            $('#pixm').css("display","none")
+            $('#card').css("display","flex")
+    });
+    $('#pix').click(function(){
+            $('#card').css("display","none")
+            $('#pixm').css("display","flex")
+    });
+
     $('#carrinho').click(function(){
         $('#bg').addClass("unblurred");
 });

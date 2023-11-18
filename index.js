@@ -38,7 +38,7 @@ function somar(){
         total+= carrinho[i][1]
     }
     console.log(total)
-    document.getElementById("valortotal").innerText = 'R$'+total
+    document.getElementById("valortotal").innerText = 'R$'+ total.toFixed(2)
 
 }
 
