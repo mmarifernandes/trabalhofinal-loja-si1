@@ -39,7 +39,13 @@ function somar(){
     }
     console.log(total)
     document.getElementById("valortotal").innerText = 'R$'+ total.toFixed(2)
-
+    document.querySelectorAll('#parcela option').forEach(option => option.remove())
+    for(let i = 1; i<=5; i++){
+        option = document.createElement("option") 
+        document.getElementById("parcela").options.add(option, i) 
+        option.innerText = i+"x de "+(total/i).toFixed(2); 
+        option.Value = total/i;
+    }
 }
 
 function hidePopUp(){
