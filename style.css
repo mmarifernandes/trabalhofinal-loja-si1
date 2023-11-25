@@ -18,9 +18,9 @@ img{
 }
 
 #imglista{
-    width: 8%;
-    height: 3%;
-    margin: 5px
+  width: 5%;
+  height: 3%;
+  margin: 10px;
 }
 .info{
     font-size: 14px;
@@ -77,13 +77,19 @@ img{
 }
 
 .total{
-    width: 40%;
-    text-align: center;
-    margin-top: 3vw;
+  width: 40%;
+  text-align: center;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  background-color: #d6c9ef;
+  border-radius: 8px;
+  padding: 2vw;
+  box-shadow: 0px 0px 6px 0px #7979791c inset;
 }
 .total h2{
     margin-bottom: 5px;
     margin-top: 0;
+    color: #393939;;
 }
 #carrinho{
     cursor: pointer;
@@ -92,29 +98,49 @@ img{
     margin: 0 auto;
     font-size: 3vw;
     margin-top: 5px;
+    color: #5d4c7e;;
 }
 #lista{
-    margin-top: 3vw;
-    margin-left: 3vw;
-    margin-bottom: 3vw;
-    margin-right: 15px;
-    /* display: flex; */
-    width: 60%;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+  margin-right: 15px;
+  /* display: flex; */
+  width: 60%;
+  background-color: #d6c9ef;
+  border-radius: 8px;
+  padding: 2vw;
+  box-shadow: 0px 0px 6px 0px #7979791c inset;
 }
 
 #lista h3{
     margin-top: 0;
+    color: #393939;
 }
 #itemlista{
-    display: flex;
-    border-bottom: 1px solid gray;
+  display: flex;
+  border-bottom: 1px solid #9f8cc3;
+  /* justify-content: space-between; */
+  align-items: center;
     /* justify-content: space-between; */
+}
+#metodos label{
+  margin-right: 15px;
+}
+
+#preco{
+  font-size: 18px;
+  margin: 10px;
 }
 
 #nomeitem{
-    width: 85%;
-    overflow-x: hidden;
-    /* margin-bottom: 5px; */
+  width: 85%;
+  overflow-x: hidden;
+  /* margin-top: 20px; */
+  /* margin-bottom: 5px; */
+  font-size: 14px;
+  /* margin-bottom: 5px; */
+  margin: 10px;
 }
 .container{
     display: flex;
@@ -142,6 +168,7 @@ img{
     width: 15px;
     height: 15px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .item{
@@ -510,4 +537,12 @@ h4{
   #pixm{
     display: none;
     justify-content: center;
+  }
+
+  #bandeiracard{
+    margin-left: -170px;
+    margin-top: 5px;
+    width: 30px;
+    display: none;
+    /* height: none !important; */
   }
