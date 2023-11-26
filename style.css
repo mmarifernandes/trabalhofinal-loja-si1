@@ -204,23 +204,19 @@ footer{
 }
 
 .item{
-    width: 20vw;
-    height: 55vh;
-    text-align: center;
-    background-color: rgb(203 191 223 / 19%);
-    padding: 15px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: rgba(175, 175, 175, 0.2) 0px 2px 8px 0px;
-    border: 1px solid rgb(213, 213, 213);
-    /* min-height: fit-content; */
-    
-    /* min-width: fit-content; */
-    /* line-break; */
+  width: 20vw;
+  height: 55vh;
+  text-align: center;
+  background-color: rgb(208 185 255 / 22%);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: rgba(175, 175, 175, 0.2) 0px 2px 8px 0px;
+  border: 1px solid rgb(213, 213, 213);
 }
 
 .item:hover{
-    box-shadow: rgb(171 152 204) 0px 2px 8px 0px;
+    box-shadow: rgb(208 185 255) 0px 2px 8px 0px;
 }
 
 .title{
