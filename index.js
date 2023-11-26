@@ -49,8 +49,11 @@ function hidePopUp() {
 
     var popup = document.getElementById('popup');
     var bg = this.document.getElementById('bg');
+    var banner = this.document.getElementById('banner');
+
     popup.style.display = 'none';
     bg.classList.remove("unblurred");
+    // banner.style.margin = '8vh 0 0 0';
 }
 // window.addEventListener('mouseup',function(event){
 //     if(event.target != popup && event.target.parentNode != popup){

@@ -11,7 +11,11 @@
       
     <div class="header">
         <h1 class="titleheader">glitchstore.com</h1>
+        <img src="assets/icon.png" alt="" id="iconp">
         <!-- <a href="/checkout.html"> -->
+            <a href="#item">
+            <p id="hparagrafo">Produtos</p>
+            </a>
             <img src="assets/carrinho.png" alt="" id="carrinho" onclick="checkOut()">
         <!-- </a> -->
     </div>
@@ -82,9 +86,12 @@
     </div>
 </div>  
     <!-- <div class="blackscreen"> -->
+    <div id="fadein">
     <img src="assets/banner.png" id="banner" alt="">
+    </div>
+    <div id="item"></div>
     <h4>Produtos disponíveis</h4>
-    <div class="container">
+    <div class="container" id="container">
 
         <div class="item">
             <img src="assets/zflip.png" alt="">
@@ -115,6 +122,13 @@
         </div>
     <!-- </div> -->
 </div>
+<footer>
+    <!-- <hr> -->
+    <h5 id="footerh5">glitchstore.com</h5>
+    <p id="copyright">copyright @2023</p>
+    <img src="assets/icon.png" alt="" id="fimage">
+    <!-- <hr> -->
+</footer>
     <script src="jquery.js"></script>
 
  <script>
@@ -130,6 +144,7 @@
 
     $('#carrinho').click(function(){
         $('#bg').addClass("unblurred");
+        // $('#banner').css("margin-top","0")
 
 });
 
@@ -163,6 +178,6 @@
     })
 
 </script>
-</div>
+
 </body>
 </html>
