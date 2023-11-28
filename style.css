@@ -19,7 +19,7 @@ body{
 img{
     width: 60%;
     height: 45%;
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
 }
 a{
   text-decoration: none;
@@ -32,11 +32,13 @@ a{
   margin: 10px;
 }
 .info{
-    font-size: 13px;
-    color: #545454;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  font-size: 13px;
+  color: #545454;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 45px;
+  overflow: hidden;
 }
 
 @keyframes enter {
@@ -88,8 +90,8 @@ a{
 .total{
   width: 40%;
   text-align: center;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
   background-color: #e2d2ff;
   border-radius: 8px;
   padding: 2vw;
@@ -110,9 +112,9 @@ a{
     color: #885fda;
 }
 #lista{
-  margin-top: 2vw;
-  margin-left: 2vw;
-  margin-bottom: 2vw;
+  margin-top: 1vw;
+  margin-left: 1vw;
+  margin-bottom: 1vw;
   margin-right: 15px;
   /* display: flex; */
   width: 60%;
@@ -213,6 +215,7 @@ footer{
   border-radius: 8px;
   box-shadow: rgba(175, 175, 175, 0.2) 0px 2px 8px 0px;
   border: 1px solid rgb(213, 213, 213);
+  /* /* height: fit-content; */
 }
 
 .item:hover{
@@ -220,11 +223,13 @@ footer{
 }
 
 .title{
-    overflow: hidden;
-    margin-top: 2vh;
-    margin-bottom: 0;
-    line-height: 30px;
-    /* margin: 0 auto; */
+  overflow: hidden;
+  margin-top: 2vh;
+  margin-bottom: 0;
+  line-height: 20px;
+  /* margin: 0 auto; */
+  height: 40px;
+  overflow: hidden;
 }
 .preco{
     /* overflow: hidden; */
@@ -626,4 +631,9 @@ h4{
   hr{
     border: 1px solid #e1d2ff;
     margin: 0 auto;
+  }
+
+  #h4p{
+    margin-left: 0;
+    text-align: center;
   }
