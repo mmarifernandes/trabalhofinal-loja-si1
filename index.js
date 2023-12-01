@@ -55,8 +55,3 @@ function hidePopUp() {
     bg.classList.remove("unblurred");
     // banner.style.margin = '8vh 0 0 0';
 }
-// window.addEventListener('mouseup',function(event){
-//     if(event.target != popup && event.target.parentNode != popup){
-//     }
-
-// });  
