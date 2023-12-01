@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/samsung-sharp-sans?styles=24555,24554,24553');    
+@import url('https://fonts.cdnfonts.com/css/samsungone?styles=20623,20624,20625');
 
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    /* letter-spacing: -1px; */
 }
 body{
     margin: 0 auto;
@@ -39,6 +42,7 @@ a{
   padding-right: 15px;
   height: 45px;
   overflow: hidden;
+  font-family: 'SamsungOne', sans-serif !important;
 }
 
 @keyframes enter {
@@ -55,6 +59,9 @@ a{
     }
 }
 
+p{
+  font-family: 'SamsungOne', sans-serif !important;
+}
 
 @keyframes animate-fade {
     0% { opacity: 0; }
@@ -137,13 +144,29 @@ a{
 }
 #metodos label{
   margin-right: 15px;
+  font-size: 16px;
+  font-family: 'SamsungOne', sans-serif;
 }
-
+label{
+  font-family: 'SamsungOne', sans-serif !important;
+}
 #preco{
   font-size: 18px;
   margin: 10px;
 }
 
+.preco{
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 5px;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#metodos{
+  padding: 2vh;
+}
 #nomeitem{
   width: 85%;
   overflow-x: hidden;
@@ -206,7 +229,7 @@ footer{
 }
 
 .item{
-  width: 20vw;
+  width: 18vw;
   height: 55vh;
   text-align: center;
   background-color: rgb(208 185 255 / 22%);
@@ -231,12 +254,6 @@ footer{
   height: 40px;
   overflow: hidden;
 }
-.preco{
-    /* overflow: hidden; */
-    margin-top: 10px;
-    padding: 5px;
-    margin-bottom: 0;
-  }
 
 
 .header{
@@ -571,11 +588,13 @@ h4{
 #card{
     display: none;
     justify-content: center;
+    /* padding-top: 4vh; */
   }
 
   #pixm{
     display: none;
     justify-content: center;
+    /* padding-top: 4vh; */
   }
 
   #bandeiracard{
