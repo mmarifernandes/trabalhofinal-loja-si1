@@ -72,30 +72,30 @@ p{
 }
 .center{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 #popup{
-    display: none;
-    width: 75%;
-    height: 70%;
-    /* display: flex; */
-    position: absolute;
-    z-index: 1;
-    /* margin: 0 auto; */
-    margin-top: 8%;
-    /* margin-left: 5%;     */
-    background-color: rgb(238 229 255);
-    border-radius: 8px;
-    box-shadow: rgba(175, 175, 175, 0.2) 0px 2px 8px 0px;
-    animation-duration: 0.5s;
-    animation-name: animate-fade;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
+  display: none;
+  position: absolute;
+  overflow-y: scroll;
+  height: 90%;
+  width: 40vw;
+  position: fixed;
+
+  z-index: 1;
+  margin-top: 8vh;
+  background-color: rgb(238, 229, 255);
+  /* border-radius: 8px; */
+  box-shadow: rgb(79 79 79 / 20%) 0px 2px 8px 0px;
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 
 }
 
 .total{
-  width: 40%;
+  /* width: 40%; */
   text-align: center;
   margin-top: 1vw;
   margin-bottom: 1vw;
@@ -103,6 +103,7 @@ p{
   border-radius: 8px;
   padding: 2vw;
   box-shadow: 0px 0px 6px 0px #7979791c inset;
+  margin: 1vw 15px 1vw 1vw;
 }
 .total h2{
     margin-bottom: 5px;
@@ -124,7 +125,7 @@ p{
   margin-bottom: 1vw;
   margin-right: 15px;
   /* display: flex; */
-  width: 60%;
+  /* width: 60%; */
   background-color: #e2d2ff;
   border-radius: 8px;
   padding: 2vw;
@@ -222,15 +223,18 @@ footer{
 }
 
 #close{
-    width: 15px;
-    height: 15px;
-    margin: 10px;
-    cursor: pointer;
+  width: 15px;
+  height: 15px;
+  /* margin: 1vw 1vw 1vw 1vw; */
+  margin-right: 1.2vw;
+  margin-top: 1vw;
+  cursor: pointer;
 }
 
 .item{
   width: 18vw;
   height: 55vh;
+  display: flex;
   text-align: center;
   background-color: rgb(208 185 255 / 22%);
   padding: 15px;
@@ -238,7 +242,10 @@ footer{
   border-radius: 8px;
   box-shadow: rgba(175, 175, 175, 0.2) 0px 2px 8px 0px;
   border: 1px solid rgb(213, 213, 213);
-  /* /* height: fit-content; */
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .item:hover{
@@ -638,4 +645,23 @@ h4{
   #h4p{
     margin-left: 0;
     text-align: center;
+  }
+
+
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .item{
+      width: 75%;
+    }
+    #popup{
+      width: 85%;
+    }
+  }
+
+  #hidepopup{
+    text-align: end;
+    margin: 0;
   }

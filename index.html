@@ -24,6 +24,9 @@
     <div class="center">
 
         <div class="popup" id="popup">
+           <p id="hidepopup">
+            <img src="assets/x.png" alt="" id="close" onclick="hidePopUp()">
+        </p>
             <p id="lista">
             </p>
             <div class="total">
@@ -76,7 +79,6 @@
 
                   
             </div>
-            <img src="assets/x.png" alt="" id="close" onclick="hidePopUp()">
 
         </div>
     </div>
@@ -148,7 +150,7 @@
     });
 
     $('#carrinho').click(function(){
-        $('#bg').addClass("unblurred");
+        // $('#bg').addClass("unblurred");
 
 });
 
