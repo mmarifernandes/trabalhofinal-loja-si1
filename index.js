@@ -12,7 +12,6 @@ function checkOut() {
     document.getElementById("popup").style.display = "flex"
     document.getElementById("popup").style.flexDirection = "column"
     printLista()
-    // somar()
     console.log("teste")
 }
 
@@ -35,12 +34,18 @@ function somar() {
     document.getElementById("valortotal").innerText = 'R$' + total.toFixed(2)
     document.querySelectorAll('#parcela option').forEach(option => option.remove())
     if(carrinho.length > 0){
-        // document.getElementById("cartao").disabled = false;
-        // document.getElementById("pix").disabled = false;
         for (let i = 1; i <= 5; i++) {
             option = document.createElement("option")
             document.getElementById("parcela").options.add(option, i)
-            option.innerText = i + "x de " + (total / i).toFixed(2);
+            if (i > 2){
+                totaljuros = (0.03*(total/i))
+                total += totaljuros
+                option.innerText = i + "x de " + (total / i).toFixed(2)+ " com juros";
+                console.log(total, totaljuros)
+            }
+            else{
+                option.innerText = i + "x de " + (total / i).toFixed(2);
+            }
             option.Value = total / i;
         }
 
@@ -53,10 +58,7 @@ function somar() {
 function hidePopUp() {
 
     var popup = document.getElementById('popup');
-    // var bg = this.document.getElementById('bg');
-    // var banner = this.document.getElementById('banner');
-
     popup.style.display = 'none';
-    // bg.classList.remove("unblurred");
-    // banner.style.margin = '8vh 0 0 0';
 }
+
+

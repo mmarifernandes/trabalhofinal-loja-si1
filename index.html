@@ -9,18 +9,21 @@
     <title>Glitchstore</title>
 </head>
 <body id="body">
-      
+    
     <div class="header">
         <h1 class="titleheader">glitchstore.com</h1>
         <img src="assets/icon.png" alt="" id="iconp">
         <!-- <a href="/checkout.html"> -->
             <a href="#item">
-            <p id="hparagrafo">Produtos</p>
+                <p id="hparagrafo">Produtos</p>
             </a>
             <img src="assets/carrinho.png" alt="" id="carrinho" onclick="checkOut()">
-        <!-- </a> -->
-    </div>
-    <div id="bg">
+            <!-- </a> -->
+        </div>
+        <div id="animationplace">
+        <dotlottie-player src="https://lottie.host/53321bdb-fc12-41e8-9567-3bd8a2d3c739/gugF6mg0JN.json" background="transparent" id="animation" speed="0.5" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+        </div>
+        <div id="bg">
     <div class="center">
 
         <div class="popup" id="popup">
@@ -40,13 +43,13 @@
                 <label for="pix">Pix</label>
                 </div>
                 <div id="pixm">
-                    <form class="checkout">
+                    <form class="checkout" id="checkout">
                         <p>
-                          <input type="text" class="checkout-input checkout-namep" placeholder="Nome completo">
+                          <input type="text" class="checkout-input checkout-namep" placeholder="Nome completo" id="nomep" required>
                           
                         </p>
                         <p>
-                            <input type="text" class="checkout-input checkout-cpf" placeholder="CPF: 123.456.789.00">
+                            <input type="text" class="checkout-input checkout-cpf" placeholder="CPF: 123.456.789.00" id="cpf" required>
                         </p>
                         <p>
                             <input type="submit" value="Finalizar" class="checkout-btnp">
@@ -54,7 +57,7 @@
                       </form>
                 </div>
                 <div id="card">
-                <form class="checkout">
+                <form class="checkout" id="checkout">
 
                     <p>
                         <label for="parcela" id="labelp">Parcelas: </label>
@@ -62,17 +65,17 @@
                         </select>
                     </p>
                     <p>
-                      <input type="text" class="checkout-input checkout-name" placeholder="Nome do titular">
-                      <input type="text" class="checkout-input checkout-exp" placeholder="MM">
-                      <input type="text" class="checkout-input checkout-exp" placeholder="AA">
+                      <input type="text" class="checkout-input checkout-name" placeholder="Nome do titular" id="nomet" required>
+                      <input type="text" class="checkout-input checkout-exp" placeholder="MM" id="dia" required>
+                      <input type="text" class="checkout-input checkout-exp" placeholder="AAAA" id="ano" required>
                     </p>
                     <p>
-                      <input type="text" class="checkout-input checkout-card" id="ncard" placeholder="1234 5678 9123 0000" maxlength="16">
+                      <input type="text" class="checkout-input checkout-card" id="ncard" placeholder="1234 5678 9123 0000" maxlength="23" required>
                       <img src="assets/cards/master.png" alt="" id="bandeiracard">
-                      <input type="text" class="checkout-input checkout-cvc" placeholder="CVC">
+                      <input type="text" class="checkout-input checkout-cvc" placeholder="CVC" id="cvc" required>
                     </p>
                     <p>
-                      <input type="submit" value="Finalizar" class="checkout-btn">
+                      <input type="submit" value="Finalizar" class="checkout-btn" id="buttoncheckout">
                     </p>
                   </form>
                 </div>
@@ -132,14 +135,25 @@
 <footer>
     <!-- <hr> -->
     <h5 id="footerh5">glitchstore.com</h5>
-    <p id="copyright">copyright @2023</p>
+    <p id="copyright">marina fernandes - copyright @2023</p>
     <img src="assets/icon.png" alt="" id="fimage">
     <!-- <hr> -->
 </footer>
     <script src="jquery.js"></script>
-
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
  <script>
 
+    $('form').submit(function(){
+        var formId = this.id,
+        form = this;
+        $('#animation').css("display","flex")
+        event.preventDefault();
+        // $('#animation').load()
+        setTimeout( function () { 
+        form.submit();
+    }, 3000);
+    });
     $('#cartao').click(function(){
             $('#pixm').css("display","none")
             $('#card').css("display","flex")
@@ -182,6 +196,45 @@
 
         }
     })
+
+    const maskday = document.getElementById('ncard');
+    const maskyear = document.getElementById('ncard');
+
+    const maskOptions = {
+        mask: '0000 0000 0000 0000',
+            };
+
+    IMask(document.getElementById('ncard'), {
+        mask: '0000 0000 0000 0000'
+    });
+
+    IMask(document.getElementById('dia'), {
+        mask: IMask.MaskedRange,
+      from: 1,
+      to: 31,
+      maxLength: 2,
+    });
+    IMask(document.getElementById('ano'), {
+        mask: IMask.MaskedRange,
+      from: 2000,
+      to: 2090,
+      maxLength: 4,
+    });
+    IMask(document.getElementById('cvc'), {
+        mask: '000',
+    });
+    IMask(document.getElementById('cpf'), {
+        mask: '000.000.000-00',
+    });
+    IMask(document.getElementById('nomet'), {
+        mask: /\p{L}+/u,
+        prepareChar: str => str.toUpperCase(),
+    });
+    IMask(document.getElementById('nomep'), {
+        mask: /\p{L}+/u,
+        prepareChar: str => str.toUpperCase(),
+    });
+    
 
 </script>
 
